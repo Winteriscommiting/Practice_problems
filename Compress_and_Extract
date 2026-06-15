@@ -1,0 +1,23 @@
+def compress(s):
+    d = {}
+    for i in s:
+        if i not in d:
+            d[i] = s.count(i)
+            
+    res = ""
+    for char, count in d.items():
+        res += char + str(count)
+    return res
+def generate(s):
+    res = ""
+    for i in range(0, len(s), 2):
+        letter = s[i]
+        count = int(s[i+1])
+        res += letter * count 
+    return res
+s = input("Enter string: ")
+if s.isalnum():
+    compressed = compress(s)
+    print("Compressed:", compressed)
+    decompressed = generate(compressed)
+    print("Regenerated:", decompressed)
