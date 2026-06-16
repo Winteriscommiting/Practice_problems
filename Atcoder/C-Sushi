@@ -1,0 +1,19 @@
+n,m=input().split()
+n,m=int(n),int(m)
+a=input().split()
+a=[int(i) for i in a]
+b=input().split()
+b=[int(i) for i in b]
+c=0
+a.sort()
+b.sort()
+s_ptr=0
+n_ptr=0
+while s_ptr<n and n_ptr<m:
+    if b[n_ptr]<=2*a[s_ptr]:
+        n_ptr+=1
+        s_ptr+=1
+        c+=1
+    else:
+        s_ptr+=1
+print(c)
