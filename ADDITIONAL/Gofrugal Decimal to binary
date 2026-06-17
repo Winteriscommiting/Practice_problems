@@ -1,0 +1,14 @@
+Write a C program to convert a decimal number to binary and print the count of 1's in it. If 1's are not present in binary number, then print invalid input.
+
+#include<stdio.h>
+int main(){
+    int dec,i,rem;
+    printf("Enter a decimal number: ");
+    scanf("%d",&dec);
+    printf("Respective Binary Number: ");
+    while(dec>0){
+        rem=dec%2;
+        dec/=2;
+        printf("%d",rem);
+    }
+}
