@@ -1,0 +1,16 @@
+n=int(input())
+res=set()
+c=0
+for i in range(n):
+    m=int(input())
+    if m<3200:
+        ind=m//400
+        res.add(ind)
+    else:
+        c+=1
+if c>0 and len(res)==0:
+    min_colors=max(1,len(res))
+else:
+    min_colors=len(res)
+max_colors=len(res)+c
+print(min_colors,max_colors)
